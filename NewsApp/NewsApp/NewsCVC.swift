@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsCVC: UICollectionViewController {
+class NewsCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var articles = [Article(headline: "this is news"),
                     Article(headline: "this is also news"),
@@ -29,4 +29,16 @@ class NewsCVC: UICollectionViewController {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height: CGFloat = 240
+        let width: CGFloat = (collectionView.frame.width / 2) - 2
+        
+        let size = CGSize(width: width, height: height)
+        
+        return size
+    }
+    
+    
 }
