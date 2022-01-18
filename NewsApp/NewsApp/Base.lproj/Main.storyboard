@@ -32,9 +32,8 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="articlePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="hDq-XC-Wm5">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="237"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-GQ-UkQ">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-GQ-UkQ">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="237"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mx4-gL-Jjq">
                                             <rect key="frame" x="0.0" y="147" width="160" height="90"/>
@@ -58,12 +57,16 @@
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1ks-GQ-UkQ" secondAttribute="trailing" id="2bt-5p-yhM"/>
                                     <constraint firstAttribute="trailing" secondItem="hDq-XC-Wm5" secondAttribute="trailing" id="35A-uk-WK7"/>
+                                    <constraint firstItem="1ks-GQ-UkQ" firstAttribute="top" secondItem="mxN-SY-avo" secondAttribute="top" id="4Fm-hM-K0q"/>
                                     <constraint firstAttribute="bottom" secondItem="hDq-XC-Wm5" secondAttribute="bottom" id="4em-1V-EVK"/>
+                                    <constraint firstItem="1ks-GQ-UkQ" firstAttribute="leading" secondItem="mxN-SY-avo" secondAttribute="leading" id="AJd-Po-22B"/>
                                     <constraint firstItem="hDq-XC-Wm5" firstAttribute="leading" secondItem="mxN-SY-avo" secondAttribute="leading" id="HFO-6L-mFM"/>
                                     <constraint firstItem="hDq-XC-Wm5" firstAttribute="top" secondItem="mxN-SY-avo" secondAttribute="top" id="JRf-Uu-sJ9"/>
                                     <constraint firstAttribute="trailing" secondItem="mx4-gL-Jjq" secondAttribute="trailing" id="QTO-nJ-46q"/>
                                     <constraint firstItem="mx4-gL-Jjq" firstAttribute="leading" secondItem="mxN-SY-avo" secondAttribute="leading" id="UCR-jC-lLL"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ks-GQ-UkQ" secondAttribute="bottom" id="dBg-b8-EcN"/>
                                     <constraint firstAttribute="bottom" secondItem="mx4-gL-Jjq" secondAttribute="bottom" id="mN5-pE-fFb"/>
                                 </constraints>
                                 <connections>
