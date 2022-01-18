@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,10 +82,48 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="News" id="RrM-bX-Zcq"/>
+                    <connections>
+                        <segue destination="t9p-yj-Lo8" kind="show" identifier="toArticleVC" id="iwe-Ne-7lV"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xu3-t0-NSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2801.449275362319" y="-355.58035714285711"/>
+        </scene>
+        <!--Article-->
+        <scene sceneID="d3w-hT-0WP">
+            <objects>
+                <viewController id="t9p-yj-Lo8" customClass="ArticleVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wm-tS-Vna">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-rY-q3g">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1pK-kN-MiM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1pK-kN-MiM" firstAttribute="bottom" secondItem="WSC-rY-q3g" secondAttribute="bottom" id="VkI-A3-imQ"/>
+                            <constraint firstItem="1pK-kN-MiM" firstAttribute="trailing" secondItem="WSC-rY-q3g" secondAttribute="trailing" id="YaY-Ow-4Cv"/>
+                            <constraint firstItem="WSC-rY-q3g" firstAttribute="leading" secondItem="1pK-kN-MiM" secondAttribute="leading" id="bUg-pb-SHF"/>
+                            <constraint firstItem="WSC-rY-q3g" firstAttribute="top" secondItem="1pK-kN-MiM" secondAttribute="top" id="wco-VQ-O42"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Article" id="Gim-yc-QtK"/>
+                    <connections>
+                        <outlet property="articleWebView" destination="WSC-rY-q3g" id="M0W-LQ-Pcs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwb-hT-K3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3636" y="-356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zip-c0-a8S">
@@ -107,6 +146,7 @@
             <point key="canvasLocation" x="1889.8550724637682" y="-356.25"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="articlePlaceholder" width="107" height="159"/>
         <systemColor name="systemBackgroundColor">
